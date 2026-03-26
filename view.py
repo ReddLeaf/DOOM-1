@@ -14,6 +14,7 @@ class TCView:
             for cell in line:
                 print(cell if cell is not None else ".", end="")
             print()
+        print()
 
     def show_day(self, day: int):
         print("====\n")

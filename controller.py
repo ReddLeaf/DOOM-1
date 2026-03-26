@@ -13,11 +13,11 @@ class TCController:
         view = self._view
 
         while True:
-            fb = None
             view.show_day(model.day)
             view.show_grid_status(model.pesos, model.grid)
             next = False
             while not next:
+                fb = None
                 act = view.ask_for_action()
                 match act:
                     case Action.PLANT:

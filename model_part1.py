@@ -56,7 +56,7 @@ class TCModel1:
                 cell = self._grid[i][j]
                 if cell is not None and cell.is_grown:
                     self._pesos += cell.harvest_value
-                    cell = None
+                    self._grid[i][j] = None
                     success = True
         return success
     
