@@ -6,8 +6,8 @@ from argparse import ArgumentParser
 
 if __name__ == "__main__":
     parser = ArgumentParser()
-    parser.add_argument("-m", "--mode", choices=packets.keys())
-    parser.add_argument("-w", "--water", choices=water.keys())
+    parser.add_argument("-m", "--mode", choices=packets.keys(), required=True)
+    parser.add_argument("-w", "--water", choices=water.keys(), required=True)
     args = parser.parse_args()
 
     mode = make_packet(args.mode)
